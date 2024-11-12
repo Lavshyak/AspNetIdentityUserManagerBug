@@ -40,7 +40,7 @@ using (var scope = app.Services.CreateScope())
     accountId = account.Id;
 }
 
-// get account by id and remember it
+// get account by accountId and remember it
 Account accountToRemember;
 using (var scope = app.Services.CreateScope())
 {
@@ -51,6 +51,21 @@ using (var scope = app.Services.CreateScope())
         throw new InvalidOperationException();
 
     accountToRemember = account;
+}
+
+// get account by accountId and UpdateSecurityStampAsync with it
+using (var scope = app.Services.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<Account>>();
+    var account = await userManager.FindByIdAsync(accountId.ToString());
+
+    if (account == null)
+        throw new InvalidOperationException();
+
+    var result = await userManager.UpdateSecurityStampAsync(account); // it's ok
+        
+    if (!result.Succeeded)
+        throw new InvalidOperationException();
 }
 
 //trying to UpdateSecurityStamp with accountToRemember
