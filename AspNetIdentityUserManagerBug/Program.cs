@@ -54,6 +54,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 // get account by accountId and UpdateSecurityStampAsync with it
+// the presence of this block does not affect the occurrence of an exception, I added it for example
 using (var scope = app.Services.CreateScope())
 {
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<Account>>();
