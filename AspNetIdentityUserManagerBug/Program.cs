@@ -75,6 +75,9 @@ using (var scope = app.Services.CreateScope())
             "to see the conflicting key values.")
         {
             Console.WriteLine("That's it");
+            
+            //why?
+            // UserManager, UserStore and DbContext is Scoped
         }
 
         throw;
