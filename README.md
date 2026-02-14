@@ -1,3 +1,4 @@
+https://github.com/dotnet/aspnetcore/issues/58892
 
 AspNetIdentityUserManagerBug .net8:
 https://github.com/Lavshyak/AspNetIdentityUserManagerBug/blob/main/AspNetIdentityUserManagerBug/Program.cs
