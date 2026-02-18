@@ -1,3 +1,5 @@
+I just rewatched it, it's not a bug and everything is fine, I'll leave it just in case.
+
 for issue https://github.com/dotnet/aspnetcore/issues/58892
 
 AspNetIdentityUserManagerBug .net8:
