@@ -1,5 +1,4 @@
-I just rewatched it, it's not a bug and everything is fine, I'll leave it just in case. \
-I reread it again and realized that I was right about there being something wrong, at least with the error message.
+there's something wrong there, at least with the error message
 
 for issue https://github.com/dotnet/aspnetcore/issues/58892
 
